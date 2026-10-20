@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="ru" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Конструктор Монолога ОГЭ: Задание 3 | 7 из 7 баллов</title>
+    <meta name="description" content="Интерактивный тренажер и мини-игра для подготовки к Заданию 3 устной части ОГЭ по английскому языку: универсальный каркас монолога из 6 связок на максимум баллов." />
+    <meta property="og:title" content="Конструктор Монолога ОГЭ: Задание 3" />
+    <meta property="og:description" content="Выучи универсальный каркас монолога за 1 минуту: 6 золотых фраз-связок для максимума на ОГЭ по английскому." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                primary: '#6366F1',
+                accent: '#EC4899',
+                cyan: '#06B6D4',
+                amber: '#F59E0B',
+                emerald: '#10B981',
+              }
+            },
+            keyframes: {
+              shake: {
+                '0%, 100%': { transform: 'translateX(0)' },
+                '20%, 60%': { transform: 'translateX(-6px)' },
+                '40%, 80%': { transform: 'translateX(6px)' },
+              },
+              pop: {
+                '0%': { transform: 'scale(0.95)', opacity: '0' },
+                '50%': { transform: 'scale(1.03)' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-4px)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { boxShadow: '0 0 15px rgba(99, 102, 241, 0.4)' },
+                '50%': { boxShadow: '0 0 25px rgba(236, 72, 153, 0.6)' },
+              }
+            },
+            animation: {
+              shake: 'shake 0.35s ease-in-out',
+              pop: 'pop 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+              float: 'float 3s ease-in-out infinite',
+              pulseGlow: 'pulseGlow 2.5s infinite',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+    <style>
+      /* Mobile viewport height and custom scrollbars */
+      body {
+        background-color: #0B0F19;
+        color: #F3F4F6;
+        min-height: 100vh;
+        min-height: 100dvh;
+        overflow-x: hidden;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .glass-card {
+        background: rgba(17, 24, 39, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .glass-card-bright {
+        background: rgba(30, 41, 59, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .glow-border {
+        box-shadow: 0 0 20px -5px rgba(99, 102, 241, 0.5);
+      }
+      /* Custom scrollbar for monologue review */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.6);
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.4);
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(99, 102, 241, 0.7);
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center p-0 sm:p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-950/60 via-slate-950 to-black">
+    <!-- App Container (9:16 mobile frame on desktop, full screen on mobile) -->
+    <main id="app-root" class="w-full max-w-md min-h-[100dvh] sm:min-h-[840px] sm:max-h-[920px] sm:rounded-3xl glass-card flex flex-col justify-between relative overflow-hidden shadow-2xl border-0 sm:border border-slate-800">
+      
+      <!-- Ambient Lighting Blobs -->
+      <div class="pointer-events-none absolute -top-24 -left-24 w-64 h-64 bg-indigo-600/25 rounded-full blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-24 -right-24 w-64 h-64 bg-pink-600/20 rounded-full blur-3xl"></div>
+
+      <!-- ========================================== -->
+      <!-- SCREEN 1: СТАРТОВЫЙ (ХУК + ВЫБОР ТЕМЫ)    -->
+      <!-- ========================================== -->
+      <section id="screen-start" class="flex-1 flex flex-col justify-between p-5 sm:p-6 z-10 transition-all duration-300">
+        <div>
+          <!-- Top Badges Bar -->
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300 border border-indigo-500/30">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              ОГЭ 2026 • Устная часть
+            </span>
+            <span class="text-xs font-bold text-slate-400 bg-slate-800/80 px-2.5 py-1 rounded-full border border-slate-700">
+              7 / 7 баллов
+            </span>
+          </div>
+
+          <!-- Hero Headline -->
+          <div class="space-y-2 mt-2">
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+              Конструктор <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-pink-400 to-amber-300">Монолога ОГЭ</span>
+            </h1>
+            <p class="text-sm text-slate-400 font-medium">
+              Собери идеальный скелет ответа за 6 шагов и забери максимум баллов!
+            </p>
+          </div>
+
+          <!-- FIPI Criteria Hook Card -->
+          <div class="mt-4 p-3.5 rounded-2xl bg-gradient-to-br from-indigo-950/60 to-slate-900/90 border border-indigo-500/30 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-xl shrink-0">
+              🎯
+            </div>
+            <div class="text-xs space-y-0.5">
+              <div class="font-bold text-indigo-300 flex items-center gap-1.5">
+                Критерий «Организация текста»
+                <span class="bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded text-[10px] font-semibold border border-emerald-500/40">+2 из 2</span>
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                6 универсальных фраз-связок гарантируют высший балл на <span class="text-white font-semibold underline decoration-indigo-400">любой</span> теме экзамена.
+              </p>
+            </div>
+          </div>
+
+          <!-- Topic Selector Section -->
+          <div class="mt-5 space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-slate-400 px-1">
+              <span>Выбери тему монолога ФИПИ:</span>
+              <span class="text-indigo-400">1 из 3</span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-2.5" id="topic-selector-container">
+              <!-- Topic 1 -->
+              <button data-topic="travelling" class="topic-btn active group w-full p-3.5 rounded-2xl glass-card hover:bg-slate-800/80 border border-indigo-500/60 bg-indigo-600/10 text-left transition-all duration-200 flex items-center justify-between relative overflow-hidden active:scale-[0.99]">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-xl shrink-0">✈️</span>
+                  <div>
+                    <div class="font-bold text-white text-sm group-hover:text-indigo-300 transition">Travelling</div>
+                    <div class="text-xs text-slate-400">Путешествия и достопримечательности</div>
+                  </div>
+                </div>
+                <div class="topic-radio w-5 h-5 rounded-full border-2 border-indigo-400 bg-indigo-500 flex items-center justify-center shrink-0">
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                </div>
+              </button>
+
+              <!-- Topic 2 -->
+              <button data-topic="fitness" class="topic-btn group w-full p-3.5 rounded-2xl glass-card hover:bg-slate-800/80 border border-slate-700/60 text-left transition-all duration-200 flex items-center justify-between relative overflow-hidden active:scale-[0.99]">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-xl shrink-0">🍏</span>
+                  <div>
+                    <div class="font-bold text-white text-sm group-hover:text-emerald-300 transition">Keeping Fit</div>
+                    <div class="text-xs text-slate-400">Здоровый образ жизни и спорт</div>
+                  </div>
+                </div>
+                <div class="topic-radio w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center shrink-0">
+                  <div class="w-2 h-2 rounded-full bg-white hidden"></div>
+                </div>
+              </button>
+
+              <!-- Topic 3 -->
+              <button data-topic="school" class="topic-btn group w-full p-3.5 rounded-2xl glass-card hover:bg-slate-800/80 border border-slate-700/60 text-left transition-all duration-200 flex items-center justify-between relative overflow-hidden active:scale-[0.99]">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-xl shrink-0">🎓</span>
+                  <div>
+                    <div class="font-bold text-white text-sm group-hover:text-purple-300 transition">School & Education</div>
+                    <div class="text-xs text-slate-400">Школа, друзья и уроки</div>
+                  </div>
+                </div>
+                <div class="topic-radio w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center shrink-0">
+                  <div class="w-2 h-2 rounded-full bg-white hidden"></div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Start CTA Button -->
+        <div class="pt-4 pb-1">
+          <button id="btn-start-game" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-extrabold text-base tracking-wide shadow-lg shadow-indigo-500/30 animate-pulseGlow transition-all duration-200 active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
+            <span>Начать сборку</span>
+            <span class="text-lg">🚀</span>
+          </button>
+          <p class="text-center text-[11px] text-slate-400 mt-2 font-medium">
+            ⏱ Время сборки: ровно 1 минута
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SCREEN 2: ИГРОВОЙ ПРОЦЕСС (6 УРОВНЕЙ)     -->
+      <!-- ========================================== -->
+      <section id="screen-game" class="flex-1 flex flex-col justify-between p-4 sm:p-5 z-10 hidden transition-all duration-300">
+        <!-- Top Stats & Progress -->
+        <div class="space-y-3">
+          <!-- Header Bar -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span id="game-topic-badge" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-800 border border-slate-700 text-indigo-300 flex items-center gap-1.5">
+                ✈️ Travelling
+              </span>
+              <span class="text-[11px] text-slate-400 font-semibold" id="step-indicator">
+                Шаг 1 из 6
+              </span>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <!-- Score Badge -->
+              <div class="px-2.5 py-1 rounded-lg bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 text-xs font-extrabold flex items-center gap-1">
+                <span>🏆</span>
+                <span id="score-text">Баллы: 1/7</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="w-full bg-slate-800/90 h-2 rounded-full overflow-hidden p-0.5 border border-slate-700/60">
+            <div id="progress-bar-fill" class="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full transition-all duration-500 ease-out" style="width: 16.66%;"></div>
+          </div>
+
+          <!-- Current Step Task Card -->
+          <div id="task-card" class="p-3.5 rounded-2xl glass-card-bright border-l-4 border-l-indigo-500 shadow-md transition-all">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <span id="task-badge" class="text-[11px] font-bold text-indigo-400 uppercase tracking-wider block mb-0.5">
+                  Шаг 1 • Вступление
+                </span>
+                <h2 id="task-instruction" class="text-sm font-bold text-white leading-snug">
+                  Начни монолог и официально заяви тему ответа
+                </h2>
+              </div>
+              <div class="w-7 h-7 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 flex items-center justify-center text-xs font-bold shrink-0">
+                <span id="step-number-circle">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center: Monologue Builder Card (Visual Live Accumulator) -->
+        <div class="my-3 flex-1 flex flex-col justify-center min-h-[200px]">
+          <div class="w-full p-4 rounded-2xl glass-card border border-slate-800 shadow-inner flex flex-col justify-between relative overflow-hidden">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                Твой монолог (Live Preview):
+              </span>
+              <span class="text-[10px] text-slate-400">Задание 3</span>
+            </div>
+
+            <!-- Accumulated sentences scroll area -->
+            <div id="monologue-stream" class="space-y-2 text-xs sm:text-[13px] leading-relaxed max-h-[190px] overflow-y-auto pr-1">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Live prompt sentence to assemble -->
+            <div id="current-building-row" class="mt-3 pt-2.5 border-t border-slate-800/80 space-y-1">
+              <div class="flex items-baseline flex-wrap gap-1.5 text-xs sm:text-[13px]">
+                <span id="current-slot" class="inline-block px-2 py-0.5 rounded-lg border-2 border-dashed border-indigo-400 text-indigo-300 bg-indigo-950/60 font-bold animate-pulse text-[11px]">
+                  [ Выбери связку снизу 👇 ]
+                </span>
+                <span id="current-body-text" class="text-slate-200 font-medium">
+                  travelling.
+                </span>
+              </div>
+              <div id="current-body-translation" class="text-[11px] text-slate-400 italic">
+                о путешествиях.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Tip / Feedback Toast -->
+        <div id="feedback-toast" class="opacity-0 translate-y-2 transition-all duration-300 mb-2 p-3 rounded-2xl text-xs font-medium flex items-center justify-between gap-2.5 border shadow-xl pointer-events-none">
+          <div class="flex items-start gap-2.5 flex-1">
+            <span id="feedback-icon" class="text-lg shrink-0 mt-0.5">💡</span>
+            <div>
+              <div id="feedback-title" class="font-bold text-[11px] uppercase tracking-wider mb-0.5 text-emerald-300">Подсказка эксперта ФИПИ:</div>
+              <div id="feedback-msg" class="leading-snug text-slate-200"></div>
+            </div>
+          </div>
+          <button id="btn-next-step" class="hidden shrink-0 px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-extrabold text-xs shadow-md transition active:scale-95 flex items-center gap-1 cursor-pointer">
+            <span>Дальше</span>
+            <span>➔</span>
+          </button>
+        </div>
+
+        <!-- Bottom: 3 Choice Buttons -->
+        <div class="space-y-2">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-1 flex items-center justify-between">
+            <span>Выбери правильную связку-мостик:</span>
+            <span class="text-indigo-400 text-[10px]">3 варианта</span>
+          </div>
+
+          <div id="options-container" class="grid grid-cols-1 gap-2">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SCREEN 3: ФИНАЛ + ШПАРГАЛКА ДЛЯ СКРИНШОТА -->
+      <!-- ========================================== -->
+      <section id="screen-final" class="flex-1 flex flex-col justify-between p-4 sm:p-5 z-10 hidden transition-all duration-300 overflow-y-auto">
+        <div class="space-y-4">
+          <!-- Trophy Banner -->
+          <div class="text-center pt-2">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500/20 via-pink-500/20 to-indigo-500/20 border border-amber-400/40 text-3xl shadow-lg shadow-amber-500/20 mb-2 animate-float">
+              🏆
+            </div>
+            <h2 class="text-2xl font-extrabold text-white tracking-tight">
+              7 из 7 баллов твои!
+            </h2>
+            <p class="text-xs text-slate-300 mt-1">
+              Ты безошибочно собрал каркас ответа. Эксперты ФИПI ставят максимум!
+            </p>
+          </div>
+
+          <!-- Tab Selector (Full Monologue vs Cheat Sheet) -->
+          <div class="flex rounded-xl bg-slate-900/90 p-1 border border-slate-800 text-xs font-bold">
+            <button id="tab-btn-monologue" class="flex-1 py-2 rounded-lg bg-indigo-600 text-white transition active:scale-95 shadow">
+              📝 Твой монолог
+            </button>
+            <button id="tab-btn-cheatsheet" class="flex-1 py-2 rounded-lg text-slate-400 hover:text-white transition active:scale-95">
+              📸 Шпаргалка ОГЭ
+            </button>
+          </div>
+
+          <!-- TAB 1: ASSEMBLED MONOLOGUE -->
+          <div id="tab-content-monologue" class="space-y-3">
+            <div class="p-4 rounded-2xl glass-card border border-indigo-500/30 relative">
+              <div class="flex items-center justify-between mb-3 pb-2 border-b border-slate-800">
+                <span id="final-topic-pill" class="text-xs font-bold text-indigo-300 flex items-center gap-1">
+                  ✈️ Travelling
+                </span>
+                <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/30 font-semibold">
+                  100% готов к ответу
+                </span>
+              </div>
+
+              <!-- Full Text With Connectors Highlighted -->
+              <div id="final-monologue-text" class="text-xs sm:text-sm leading-relaxed space-y-2 text-slate-200">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Copy Action Bar -->
+            <div>
+              <button id="btn-copy-text" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white text-xs font-bold flex items-center justify-center gap-2 transition active:scale-95 shadow-md cursor-pointer">
+                <span>📋</span>
+                <span id="copy-btn-text">Скопировать весь монолог</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- TAB 2: CHEAT SHEET (SCREENSHOT READY) -->
+          <div id="tab-content-cheatsheet" class="space-y-3 hidden">
+            <div class="p-4 rounded-2xl bg-gradient-to-b from-slate-900 to-indigo-950/80 border-2 border-indigo-400/50 shadow-2xl relative">
+              <div class="text-center mb-3">
+                <div class="inline-block px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 text-[10px] font-bold uppercase tracking-wider border border-pink-500/30 mb-1">
+                  📸 Сделай скриншот экрана
+                </div>
+                <h3 class="text-base font-extrabold text-white">
+                  Универсальный скелет монолога ОГЭ
+                </h3>
+                <p class="text-[11px] text-slate-400">
+                  Подходит абсолютно к любой из 30+ тем кодификатора ФИПИ
+                </p>
+              </div>
+
+              <!-- 6 Phrases Grid -->
+              <div class="space-y-2 text-xs">
+                <!-- 1 -->
+                <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-md bg-indigo-500 text-white font-bold flex items-center justify-center text-[11px] shrink-0">1</span>
+                  <div>
+                    <div class="font-bold text-indigo-300">I’m going to give a talk about...</div>
+                    <div class="text-[11px] text-slate-300">Вступление: «Я собираюсь рассказать о [теме]...»</div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-md bg-indigo-500 text-white font-bold flex items-center justify-center text-[11px] shrink-0">2</span>
+                  <div>
+                    <div class="font-bold text-indigo-300">First of all, I’d like to say that...</div>
+                    <div class="text-[11px] text-slate-300">Пункт 1: «Прежде всего, я хотел бы сказать, что...»</div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-md bg-indigo-500 text-white font-bold flex items-center justify-center text-[11px] shrink-0">3</span>
+                  <div>
+                    <div class="font-bold text-indigo-300">Besides, ...</div>
+                    <div class="text-[11px] text-slate-300">Пункт 2: «Кроме того, ...» (связка-дополнение)</div>
+                  </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-md bg-indigo-500 text-white font-bold flex items-center justify-center text-[11px] shrink-0">4</span>
+                  <div>
+                    <div class="font-bold text-indigo-300">Moreover, ...</div>
+                    <div class="text-[11px] text-slate-300">Пункт 3: «Более того, ...» (усиливающая связка)</div>
+                  </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-md bg-indigo-500 text-white font-bold flex items-center justify-center text-[11px] shrink-0">5</span>
+                  <div>
+                    <div class="font-bold text-indigo-300">Personally, I think...</div>
+                    <div class="text-[11px] text-slate-300">Пункт 4: «Лично я считаю...» (обязательное личное отношение!)</div>
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-md bg-indigo-500 text-white font-bold flex items-center justify-center text-[11px] shrink-0">6</span>
+                  <div>
+                    <div class="font-bold text-indigo-300">That’s all I wanted to say.</div>
+                    <div class="text-[11px] text-slate-300">Заключение: «Это всё, что я хотел сказать.» (финал)</div>
+                  </div>
+                </div>
+              <!-- Sample Easy Monologue for Screenshot -->
+              <div class="mt-3 p-3 rounded-xl bg-indigo-950/50 border border-indigo-500/30 text-xs">
+                <div class="font-bold text-indigo-300 text-[11px] uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                  <span>✨</span>
+                  <span>Образец простого ответа (1 минута):</span>
+                </div>
+                <div id="cheat-sample-text" class="text-slate-300 space-y-1.5 text-[11px] leading-relaxed">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+
+              <!-- Pro Tip Badge -->
+              <div class="mt-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[11px] text-amber-200">
+                💡 <span class="font-bold">Лайфхак ОГЭ:</span> На подготовку дается 1.5 мин, на ответ — 2 мин. Скажи эти 6 простых предложений — и эксперты поставят максимум!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Actions -->
+        <div class="pt-4 pb-2 space-y-2">
+          <button id="btn-restart-game" class="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-extrabold text-sm shadow-lg shadow-indigo-500/30 transition active:scale-95 flex items-center justify-center gap-2">
+            <span>Собрать с другой темой</span>
+            <span>🔄</span>
+          </button>
+          <button id="btn-retry-speed" class="w-full py-2.5 px-4 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white font-bold text-xs transition active:scale-95 flex items-center justify-center gap-1.5">
+            <span>Пройти эту тему еще раз на скорость</span>
+            <span>⏱</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Fallback celebratory container for systems where canvas-confetti is blocked -->
+      <div id="fallback-confetti-layer" class="pointer-events-none fixed inset-0 overflow-hidden z-50 hidden"></div>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- GAME LOGIC (VANILLA JS + WEB AUDIO)         -->
+    <!-- ========================================== -->
+    <script>
+      (function() {
+        'use strict';
+
+        // ----------------------------------------------------
+        // 1. DATASETS & CONTENT REPOSITORY
+        // ----------------------------------------------------
+        const TOPICS_DATA = {
+          travelling: {
+            id: 'travelling',
+            name: 'Travelling',
+            icon: '✈️',
+            translation: 'Путешествия',
+            steps: [
+              {
+                stepNum: 1,
+                badge: 'Шаг 1 • Вступление',
+                instruction: 'Начни монолог и назови тему задания',
+                body: 'travelling.',
+                bodyRu: 'о путешествиях.',
+                correctPhrase: 'I’m going to give a talk about',
+                translationRu: 'Я собираюсь рассказать о путешествиях.',
+                fipiTip: '🔥 Идеальный старт! Эксперты ФИПИ сразу засчитывают вступление.',
+                distractors: [
+                  { phrase: 'Well, guys, listen...', explanation: '❌ Слишком неформально! На ОГЭ снизят балл за сленг.' },
+                  { phrase: 'Today I want to speak...', explanation: '❌ Разговорная фраза. По критериям ФИПИ эталон — "I’m going to give a talk about..."' }
+                ]
+              },
+              {
+                stepNum: 2,
+                badge: 'Шаг 2 • Пункт 1 плана',
+                instruction: 'Раскрой 1-й пункт: почему люди путешествуют',
+                body: 'people travel to see new places and relax.',
+                bodyRu: 'люди путешествуют, чтобы увидеть новые места и отдохнуть.',
+                correctPhrase: 'First of all, I’d like to say that',
+                translationRu: 'Прежде всего, я хотел бы сказать, что люди путешествуют, чтобы увидеть новые места и отдохнуть.',
+                fipiTip: '⚡️ Эталонная связка для раскрытия 1-го пункта!',
+                distractors: [
+                  { phrase: 'At first, I think...', explanation: '❌ "At first" означает "сначала (но потом передумал)", а связка для плана — "First of all".' },
+                  { phrase: 'In the first place of all...', explanation: '❌ Калька с русского! По-английски говорят "First of all".' }
+                ]
+              },
+              {
+                stepNum: 3,
+                badge: 'Шаг 3 • Пункт 2 плана',
+                instruction: 'Добавь 2-й пункт: удобный транспорт для поездок',
+                body: 'travelling by train or plane is fast and comfortable.',
+                bodyRu: 'путешествовать на поезде или самолете быстро и удобно.',
+                correctPhrase: 'Besides,',
+                translationRu: 'Кроме того, путешествовать на поезде или самолете быстро и удобно.',
+                fipiTip: '✨ Топ! Короткая и легкая связка "Besides" дает максимум за связность.',
+                distractors: [
+                  { phrase: 'At second,...', explanation: '❌ Слова "At second" в английском языке НЕ существует! Это грубая ошибка.' },
+                  { phrase: 'And also,...', explanation: '❌ Начинать предложение с "And also" на экзамене не рекомендуется.' }
+                ]
+              },
+              {
+                stepNum: 4,
+                badge: 'Шаг 4 • Пункт 3 плана',
+                instruction: 'Добавь 3-й пункт: популярные занятия в поездках',
+                body: 'taking photos and trying local food is always fun.',
+                bodyRu: 'делать фото и пробовать местную еду всегда весело.',
+                correctPhrase: 'Moreover,',
+                translationRu: 'Более того, делать фото и пробовать местную еду всегда весело.',
+                fipiTip: '💎 "Moreover" — золотая связка ОГЭ для усиления аргументации.',
+                distractors: [
+                  { phrase: 'Next thing is...', explanation: '❌ Слишком разговорно для экзаменационного монолога.' },
+                  { phrase: 'More of this...', explanation: '❌ Неправильный оборот. Используй красивое слово "Moreover".' }
+                ]
+              },
+              {
+                stepNum: 5,
+                badge: 'Шаг 5 • Пункт 4 плана (Attitude)',
+                instruction: 'Вырази личное мнение (твое отношение к путешествиям)',
+                body: 'travelling helps us learn a lot about the world.',
+                bodyRu: 'путешествия помогают нам узнать много нового о мире.',
+                correctPhrase: 'Personally, I think',
+                translationRu: 'Лично я считаю, что путешествия помогают нам узнать много нового о мире.',
+                fipiTip: '🎯 Четко выраженное личное мнение — строгое требование 4-го пункта!',
+                distractors: [
+                  { phrase: 'Everybody knows that...', explanation: '❌ Требуется ТВОЕ личное мнение, а не то, что знают все.' },
+                  { phrase: 'My opinion is that personally...', explanation: '❌ Тавтология! Используй простую и точную фразу "Personally, I think".' }
+                ]
+              },
+              {
+                stepNum: 6,
+                badge: 'Шаг 6 • Заключение',
+                instruction: 'Заверши монолог обязательной итоговой фразой',
+                body: '',
+                bodyRu: '',
+                correctPhrase: 'That’s all I wanted to say.',
+                translationRu: 'Это всё, что я хотел сказать.',
+                fipiTip: '🏆 Финал монолога засчитан на максимум!',
+                distractors: [
+                  { phrase: 'Bye-bye!', explanation: '❌ На ОГЭ нельзя прощаться! Эксперты требуют каноническую фразу завершения.' },
+                  { phrase: 'I finished.', explanation: '❌ Слишком просторечно, за такое снижают балл.' }
+                ]
+              }
+            ]
+          },
+          fitness: {
+            id: 'fitness',
+            name: 'Keeping Fit',
+            icon: '🍏',
+            translation: 'Здоровый образ жизни',
+            steps: [
+              {
+                stepNum: 1,
+                badge: 'Шаг 1 • Вступление',
+                instruction: 'Начни монолог и назови тему здорового образа жизни',
+                body: 'keeping fit.',
+                bodyRu: 'о поддержании формы.',
+                correctPhrase: 'I’m going to give a talk about',
+                translationRu: 'Я собираюсь рассказать о поддержании формы.',
+                fipiTip: '🔥 Идеальное вступление по критериям ФИПИ.',
+                distractors: [
+                  { phrase: 'Listen to my story about...', explanation: '❌ Слишком разговорно для экзаменационной записи.' },
+                  { phrase: 'Today I tell you about...', explanation: '❌ Грамматически неверно (нужно tell you about).' }
+                ]
+              },
+              {
+                stepNum: 2,
+                badge: 'Шаг 2 • Пункт 1 плана',
+                instruction: 'Раскрой 1-й пункт: почему спорт важен для подростков',
+                body: 'doing sports helps teenagers stay strong and healthy.',
+                bodyRu: 'спорт помогает подросткам оставаться сильными и здоровыми.',
+                correctPhrase: 'First of all, I’d like to say that',
+                translationRu: 'Прежде всего, я хотел бы сказать, что спорт помогает подросткам оставаться сильными и здоровыми.',
+                fipiTip: '⚡️ Академическая связка высшего пилотажа.',
+                distractors: [
+                  { phrase: 'At first, I think...', explanation: '❌ "At first" — частая ошибка 9-классников. Правильно: "First of all".' },
+                  { phrase: 'First thing first...', explanation: '❌ Это сленговая идиома, нужен нейтральный экзаменационный стиль.' }
+                ]
+              },
+              {
+                stepNum: 3,
+                badge: 'Шаг 3 • Пункт 2 плана',
+                instruction: 'Добавь 2-й пункт: здоровое питание и полезные привычки',
+                body: 'it is important to eat fruit and drink water every day.',
+                bodyRu: 'важно каждый день есть фрукты и пить воду.',
+                correctPhrase: 'Besides,',
+                translationRu: 'Кроме того, важно каждый день есть фрукты и пить воду.',
+                fipiTip: '✨ Связка "Besides" идеально привязывает второй аргумент.',
+                distractors: [
+                  { phrase: 'At second,...', explanation: '❌ Такой фразы нет в английском! Никогда не говори "At second".' },
+                  { phrase: 'And plus to this...', explanation: '❌ Неграмотная русифицированная фраза.' }
+                ]
+              },
+              {
+                stepNum: 4,
+                badge: 'Шаг 4 • Пункт 3 плана',
+                instruction: 'Добавь 3-й пункт: что ты делаешь лично для здоровья',
+                body: 'I walk a lot in the park and sleep eight hours.',
+                bodyRu: 'я много гуляю в парке и сплю восемь часов.',
+                correctPhrase: 'Moreover,',
+                translationRu: 'Более того, я много гуляю в парке и сплю восемь часов.',
+                fipiTip: '💎 "Moreover" поднимает связность монолога на максимум.',
+                distractors: [
+                  { phrase: 'Next argument is...', explanation: '❌ Звучит тяжело, используй естественную связку "Moreover".' },
+                  { phrase: 'Also I want to add that...', explanation: '❌ "Moreover" звучит в разы чище и убедительнее.' }
+                ]
+              },
+              {
+                stepNum: 5,
+                badge: 'Шаг 5 • Пункт 4 плана (Attitude)',
+                instruction: 'Вырази личное мнение о здоровом образе жизни',
+                body: 'a healthy lifestyle gives us a lot of energy.',
+                bodyRu: 'здоровый образ жизни дает нам много энергии.',
+                correctPhrase: 'Personally, I think',
+                translationRu: 'Лично я считаю, что здоровый образ жизни дает нам много энергии.',
+                fipiTip: '🎯 Четко выраженное личное отношение — максимальный балл!',
+                distractors: [
+                  { phrase: 'Doctors say that...', explanation: '❌ Задание требует ТВОЕ личное мнение, а не врачей.' },
+                  { phrase: 'In my personal own opinion...', explanation: '❌ Избыточная тавтология.' }
+                ]
+              },
+              {
+                stepNum: 6,
+                badge: 'Шаг 6 • Заключение',
+                instruction: 'Заверши монолог обязательной итоговой фразой',
+                body: '',
+                bodyRu: '',
+                correctPhrase: 'That’s all I wanted to say.',
+                translationRu: 'Это всё, что я хотел сказать.',
+                fipiTip: '🏆 Финал монолога засчитан на максимум!',
+                distractors: [
+                  { phrase: 'The end!', explanation: '❌ "The end" пишут в сказках, на ОГЭ так говорить нельзя.' },
+                  { phrase: 'Thank you, bye.', explanation: '❌ Запись идет на компьютер, прощания не принимаются за заключение.' }
+                ]
+              }
+            ]
+          },
+          school: {
+            id: 'school',
+            name: 'School & Education',
+            icon: '🎓',
+            translation: 'Школа и образование',
+            steps: [
+              {
+                stepNum: 1,
+                badge: 'Шаг 1 • Вступление',
+                instruction: 'Начни монолог и назови тему школы',
+                body: 'my school.',
+                bodyRu: 'о своей школе.',
+                correctPhrase: 'I’m going to give a talk about',
+                translationRu: 'Я собираюсь рассказать о своей школе.',
+                fipiTip: '🔥 Идеальное вступление по критериям ФИПИ.',
+                distractors: [
+                  { phrase: 'I tell about school...', explanation: '❌ Пропущен предлог (нужно tell you about / talk about).' },
+                  { phrase: 'Here is my answer about...', explanation: '❌ Искусственная фраза, нарушающая связный монолог.' }
+                ]
+              },
+              {
+                stepNum: 2,
+                badge: 'Шаг 2 • Пункт 1 плана',
+                instruction: 'Раскрой 1-й пункт: зачем нужна школа и что она дает',
+                body: 'school gives us useful knowledge and good friends.',
+                bodyRu: 'школа дает нам полезные знания и хороших друзей.',
+                correctPhrase: 'First of all, I’d like to say that',
+                translationRu: 'Прежде всего, я хотел бы сказать, что школа дает нам полезные знания и хороших друзей.',
+                fipiTip: '⚡️ Классическая связка для 1-го пункта плана.',
+                distractors: [
+                  { phrase: 'At first, I say...', explanation: '❌ "At first" — частая ошибка 9-классников. Правильно: "First of all".' },
+                  { phrase: 'Number one is that...', explanation: '❌ Слишком разговорно для государственного экзамена.' }
+                ]
+              },
+              {
+                stepNum: 3,
+                badge: 'Шаг 3 • Пункт 2 плана',
+                instruction: 'Добавь 2-й пункт: внеклассные мероприятия и секции',
+                body: 'we have great sports clubs and fun school events.',
+                bodyRu: 'у нас есть отличные спортивные секции и веселые школьные мероприятия.',
+                correctPhrase: 'Besides,',
+                translationRu: 'Кроме того, у нас есть отличные спортивные секции и веселые школьные мероприятия.',
+                fipiTip: '✨ Связка "Besides" идеально привязывает 2-й тезис.',
+                distractors: [
+                  { phrase: 'At second,...', explanation: '❌ Такой связки нет в английском языке!' },
+                  { phrase: 'Another thing is...', explanation: '❌ "Besides" звучит значительно аккуратнее и грамотнее.' }
+                ]
+              },
+              {
+                stepNum: 4,
+                badge: 'Шаг 4 • Пункт 3 плана',
+                instruction: 'Добавь 3-й пункт: помощь учителей и уроки',
+                body: 'our teachers always help us with difficult tasks.',
+                bodyRu: 'наши учителя всегда помогают нам с трудными заданиями.',
+                correctPhrase: 'Moreover,',
+                translationRu: 'Более того, наши учителя всегда помогают нам с трудными заданиями.',
+                fipiTip: '💎 "Moreover" — мостик уровня B1/B2 для отличного монолога.',
+                distractors: [
+                  { phrase: 'More than that I want...', explanation: '❌ Неуклюжий оборот, снижающий плавность речи.' },
+                  { phrase: 'And by the way,...', explanation: '❌ "By the way" (кстати) уводит в сторону от темы.' }
+                ]
+              },
+              {
+                stepNum: 5,
+                badge: 'Шаг 5 • Пункт 4 плана (Attitude)',
+                instruction: 'Вырази личное мнение о школьных годах',
+                body: 'school is the best place to learn and make friends.',
+                bodyRu: 'школа — лучшее место, чтобы учиться и находить друзей.',
+                correctPhrase: 'Personally, I think',
+                translationRu: 'Лично я считаю, что школа — лучшее место, чтобы учиться и находить друзей.',
+                fipiTip: '🎯 Личное отношение сформулировано просто и безукоризненно.',
+                distractors: [
+                  { phrase: 'It is true that...', explanation: '❌ Это констатация факта, а пункт требует личное мнение.' },
+                  { phrase: 'My thoughts are that...', explanation: '❌ Нестандартный оборот, используй "Personally, I think".' }
+                ]
+              },
+              {
+                stepNum: 6,
+                badge: 'Шаг 6 • Заключение',
+                instruction: 'Заверши монолог обязательной итоговой фразой',
+                body: '',
+                bodyRu: '',
+                correctPhrase: 'That’s all I wanted to say.',
+                translationRu: 'Это всё, что я хотел сказать.',
+                fipiTip: '🏆 Максимальный балл за организацию текста обеспечен!',
+                distractors: [
+                  { phrase: 'I am done, goodbye!', explanation: '❌ Неформальное прощание не засчитывается за заключение.' },
+                  { phrase: 'That is the finish.', explanation: '❌ Неестественная фраза, эксперты ждут "That’s all I wanted to say."' }
+                ]
+              }
+            ]
+          }
+        };
+
+        // ----------------------------------------------------
+        // 2. AUDIO SYNTHESIS REMOVED (SILENT TRAINER)
+        // ----------------------------------------------------
+        function playTone() {}
+        function playSuccessSound() {}
+        function playErrorSound() {}
+        function playClickSound() {}
+        function playVictorySound() {}
+
+        // ----------------------------------------------------
+        // 3. CONFETTI WITH SAFE FALLBACK
+        // ----------------------------------------------------
+        function triggerCelebration() {
+          // Play fanfare
+          playVictorySound();
+
+          // Try canvas-confetti first
+          try {
+            if (typeof window.confetti === 'function') {
+              const count = 200;
+              const defaults = {
+                origin: { y: 0.7 },
+                zIndex: 9999
+              };
+
+              function fire(particleRatio, opts) {
+                window.confetti(Object.assign({}, defaults, opts, {
+                  particleCount: Math.floor(count * particleRatio)
+                }));
+              }
+
+              fire(0.25, { spread: 26, startVelocity: 55 });
+              fire(0.2, { spread: 60 });
+              fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+              fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+              fire(0.1, { spread: 120, startVelocity: 45 });
+              return;
+            }
+          } catch (e) {
+            console.warn('Canvas confetti error, falling back:', e);
+          }
+
+          // Fallback if canvas is blocked
+          triggerFallbackConfetti();
+        }
+
+        function triggerFallbackConfetti() {
+          const layer = document.getElementById('fallback-confetti-layer');
+          if (!layer) return;
+          layer.innerHTML = '';
+          layer.classList.remove('hidden');
+
+          const emojis = ['🎉', '✨', '🏆', '⭐', '💯', '🎈'];
+          for (let i = 0; i < 30; i++) {
+            const span = document.createElement('span');
+            span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            span.style.position = 'absolute';
+            span.style.left = Math.random() * 95 + '%';
+            span.style.top = '-50px';
+            span.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            span.style.transition = 'all ' + (Math.random() * 2 + 1.5) + 's ease-out';
+            layer.appendChild(span);
+
+            setTimeout(() => {
+              span.style.transform = `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 360}deg)`;
+              span.style.opacity = '0';
+            }, 50);
+          }
+
+          setTimeout(() => {
+            layer.classList.add('hidden');
+            layer.innerHTML = '';
+          }, 3500);
+        }
+
+        // ----------------------------------------------------
+        // 4. GAME STATE MANAGEMENT
+        // ----------------------------------------------------
+        const state = {
+          selectedTopicId: 'travelling',
+          currentStepIndex: 0,
+          assembledSentences: [], // array of { phrase, body, stepNum }
+          score: 1, // Start at 1 and progress to 7
+        };
+
+        // DOM Elements
+        const screenStart = document.getElementById('screen-start');
+        const screenGame = document.getElementById('screen-game');
+        const screenFinal = document.getElementById('screen-final');
+
+        const topicButtons = document.querySelectorAll('.topic-btn');
+        const btnStartGame = document.getElementById('btn-start-game');
+
+        const stepIndicator = document.getElementById('step-indicator');
+        const scoreText = document.getElementById('score-text');
+        const progressBarFill = document.getElementById('progress-bar-fill');
+        const gameTopicBadge = document.getElementById('game-topic-badge');
+
+        const taskBadge = document.getElementById('task-badge');
+        const taskInstruction = document.getElementById('task-instruction');
+        const stepNumberCircle = document.getElementById('step-number-circle');
+
+        const monologueStream = document.getElementById('monologue-stream');
+        const currentSlot = document.getElementById('current-slot');
+        const currentBodyText = document.getElementById('current-body-text');
+        const currentBodyTranslation = document.getElementById('current-body-translation');
+        const optionsContainer = document.getElementById('options-container');
+
+        const feedbackToast = document.getElementById('feedback-toast');
+        const feedbackIcon = document.getElementById('feedback-icon');
+        const feedbackTitle = document.getElementById('feedback-title');
+        const feedbackMsg = document.getElementById('feedback-msg');
+        const btnNextStep = document.getElementById('btn-next-step');
+
+        // Final Screen Elements
+        const finalTopicPill = document.getElementById('final-topic-pill');
+        const finalMonologueText = document.getElementById('final-monologue-text');
+        const btnCopyText = document.getElementById('btn-copy-text');
+        const copyBtnText = document.getElementById('copy-btn-text');
+
+        const tabBtnMonologue = document.getElementById('tab-btn-monologue');
+        const tabBtnCheatsheet = document.getElementById('tab-btn-cheatsheet');
+        const tabContentMonologue = document.getElementById('tab-content-monologue');
+        const tabContentCheatsheet = document.getElementById('tab-content-cheatsheet');
+        const cheatSampleText = document.getElementById('cheat-sample-text');
+
+        const btnRestartGame = document.getElementById('btn-restart-game');
+        const btnRetrySpeed = document.getElementById('btn-retry-speed');
+
+        // ----------------------------------------------------
+        // 5. TOPIC SELECTION
+        // ----------------------------------------------------
+        topicButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            playClickSound();
+            const topicId = btn.getAttribute('data-topic');
+            state.selectedTopicId = topicId;
+
+            topicButtons.forEach(b => {
+              b.classList.remove('active', 'border-indigo-500/60', 'bg-indigo-600/10');
+              b.classList.add('border-slate-700/60');
+              const radioDot = b.querySelector('.topic-radio div');
+              const radioBox = b.querySelector('.topic-radio');
+              if (radioDot) radioDot.classList.add('hidden');
+              if (radioBox) {
+                radioBox.classList.remove('border-indigo-400', 'bg-indigo-500');
+                radioBox.classList.add('border-slate-600');
+              }
+            });
+
+            btn.classList.add('active', 'border-indigo-500/60', 'bg-indigo-600/10');
+            btn.classList.remove('border-slate-700/60');
+            const activeDot = btn.querySelector('.topic-radio div');
+            const activeBox = btn.querySelector('.topic-radio');
+            if (activeDot) activeDot.classList.remove('hidden');
+            if (activeBox) {
+              activeBox.classList.add('border-indigo-400', 'bg-indigo-500');
+              activeBox.classList.remove('border-slate-600');
+            }
+          });
+        });
+
+        // ----------------------------------------------------
+        // 7. STARTING THE GAME
+        // ----------------------------------------------------
+        btnStartGame.addEventListener('click', () => {
+          playTone(587.33, 0.1, 'sine');
+          startGame();
+        });
+
+        function startGame() {
+          state.currentStepIndex = 0;
+          state.assembledSentences = [];
+          state.score = 1;
+
+          const topic = TOPICS_DATA[state.selectedTopicId];
+          gameTopicBadge.textContent = `${topic.icon} ${topic.name}`;
+
+          screenStart.classList.add('hidden');
+          screenFinal.classList.add('hidden');
+          screenGame.classList.remove('hidden');
+
+          renderStep();
+        }
+
+        // ----------------------------------------------------
+        // 8. STEP RENDERING & CHOICES
+        // ----------------------------------------------------
+        function renderStep() {
+          const topic = TOPICS_DATA[state.selectedTopicId];
+          const stepData = topic.steps[state.currentStepIndex];
+
+          // Update Top Indicators
+          stepIndicator.textContent = `Шаг ${state.currentStepIndex + 1} из 6`;
+          stepNumberCircle.textContent = state.currentStepIndex + 1;
+          scoreText.textContent = `Баллы: ${state.score}/7`;
+
+          const progressPercent = ((state.currentStepIndex + 1) / 6) * 100;
+          progressBarFill.style.width = `${progressPercent}%`;
+
+          // Update Task Card
+          taskBadge.textContent = stepData.badge;
+          taskInstruction.textContent = stepData.instruction;
+
+          // Update Center Live Monologue Stream
+          renderMonologueStream();
+
+          // Update Current Slot
+          currentSlot.textContent = '[ Выбери связку снизу 👇 ]';
+          currentSlot.className = 'inline-block px-2 py-0.5 rounded-lg border-2 border-dashed border-indigo-400 text-indigo-300 bg-indigo-950/60 font-bold animate-pulse text-[11px]';
+          currentBodyText.textContent = stepData.body ? stepData.body : '';
+          if (currentBodyTranslation) {
+            currentBodyTranslation.textContent = stepData.bodyRu || stepData.translationRu || '';
+          }
+
+          // Hide Toast
+          hideFeedbackToast();
+
+          // Prepare Options (1 Correct + 2 Distractors shuffled)
+          const choices = [
+            { text: stepData.correctPhrase, isCorrect: true, tip: stepData.fipiTip },
+            { text: stepData.distractors[0].phrase, isCorrect: false, tip: stepData.distractors[0].explanation },
+            { text: stepData.distractors[1].phrase, isCorrect: false, tip: stepData.distractors[1].explanation }
+          ];
+
+          // Fisher-Yates shuffle
+          for (let i = choices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [choices[i], choices[j]] = [choices[j], choices[i]];
+          }
+
+          // Render Option Buttons
+          optionsContainer.innerHTML = '';
+          choices.forEach((c, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'option-choice-btn w-full p-3 sm:p-3.5 rounded-2xl glass-card hover:bg-slate-800/90 border border-slate-700/80 text-left transition-all duration-150 flex items-center justify-between group active:scale-[0.98] cursor-pointer';
+            btn.innerHTML = `
+              <div class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 text-slate-400 group-hover:text-indigo-300 font-bold text-xs flex items-center justify-center shrink-0">
+                  ${String.fromCharCode(65 + idx)}
+                </span>
+                <span class="font-bold text-white text-xs sm:text-sm group-hover:text-indigo-200">
+                  ${c.text}
+                </span>
+              </div>
+              <span class="choice-status-icon text-slate-500 text-xs">👉</span>
+            `;
+
+            btn.addEventListener('click', () => handleOptionClick(btn, c, stepData));
+            optionsContainer.appendChild(btn);
+          });
+        }
+
+        function renderMonologueStream() {
+          monologueStream.innerHTML = '';
+          if (state.assembledSentences.length === 0) {
+            monologueStream.innerHTML = `
+              <div class="text-slate-500 italic text-xs py-2">
+                Твой монолог пуст. Выбери первую связку, чтобы начать сборку!
+              </div>
+            `;
+            return;
+          }
+
+          state.assembledSentences.forEach((s) => {
+            const row = document.createElement('div');
+            row.className = 'animate-pop py-1 border-b border-slate-800/50 last:border-0';
+            row.innerHTML = `
+              <div class="flex items-baseline flex-wrap gap-1 text-slate-200">
+                <span class="inline-block px-1.5 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 font-bold border border-indigo-500/30 text-[11px]">
+                  ${s.phrase}
+                </span>
+                <span>${s.body ? s.body : ''}</span>
+              </div>
+              ${s.translationRu ? `<div class="text-[10px] text-slate-400 pl-1 mt-0.5 italic">${s.translationRu}</div>` : ''}
+            `;
+            monologueStream.appendChild(row);
+          });
+
+          // Scroll to bottom
+          monologueStream.scrollTop = monologueStream.scrollHeight;
+        }
+
+        // ----------------------------------------------------
+        // 9. CLICK HANDLER & FEEDBACK
+        // ----------------------------------------------------
+        let isProcessingStep = false;
+
+        function handleOptionClick(btn, choice, stepData) {
+          if (isProcessingStep) return;
+
+          if (choice.isCorrect) {
+            isProcessingStep = true;
+            playSuccessSound();
+
+            // Highlight button green
+            btn.classList.remove('glass-card', 'border-slate-700/80', 'hover:bg-slate-800/90');
+            btn.classList.add('bg-emerald-500/25', 'border-emerald-500', 'text-emerald-300', 'shadow-lg', 'shadow-emerald-500/20');
+            btn.querySelector('.choice-status-icon').textContent = '✅';
+
+            // Snap connector into live slot preview
+            currentSlot.textContent = choice.text;
+            currentSlot.className = 'inline-block px-2 py-0.5 rounded-lg border border-emerald-400 text-emerald-300 bg-emerald-950/80 font-bold text-[11px] animate-pop';
+
+            // Increment points
+            state.score = Math.min(7, state.score + 1);
+            scoreText.textContent = `Баллы: ${state.score}/7`;
+
+            // Record into assembled sentences
+            state.assembledSentences.push({
+              stepNum: state.currentStepIndex + 1,
+              phrase: choice.text,
+              body: stepData.body,
+              translationRu: stepData.translationRu
+            });
+
+            // Show FIPI lifehack tooltip with prominent "Дальше ➔" button
+            showFeedbackToast(choice.tip, true);
+
+            // Generous auto-advance delay (4.5 seconds) so user can comfortably read, or tap "Дальше ➔" immediately!
+            if (advanceTimer) clearTimeout(advanceTimer);
+            advanceTimer = setTimeout(() => {
+              goToNextStep();
+            }, 4500);
+
+          } else {
+            // Wrong Answer
+            playErrorSound();
+
+            // Shake animation and red outline
+            btn.classList.add('animate-shake', 'border-rose-500', 'bg-rose-500/20');
+            btn.querySelector('.choice-status-icon').textContent = '❌';
+
+            showFeedbackToast(choice.tip, false);
+
+            if (advanceTimer) clearTimeout(advanceTimer);
+            advanceTimer = setTimeout(() => {
+              hideFeedbackToast();
+            }, 4000);
+
+            setTimeout(() => {
+              btn.classList.remove('animate-shake');
+            }, 400);
+          }
+        }
+
+        let advanceTimer = null;
+
+        function goToNextStep() {
+          if (advanceTimer) {
+            clearTimeout(advanceTimer);
+            advanceTimer = null;
+          }
+          isProcessingStep = false;
+          hideFeedbackToast();
+          state.currentStepIndex++;
+          if (state.currentStepIndex < 6) {
+            renderStep();
+          } else {
+            finishGame();
+          }
+        }
+
+        if (btnNextStep) {
+          btnNextStep.addEventListener('click', (e) => {
+            e.stopPropagation();
+            playClickSound();
+            goToNextStep();
+          });
+        }
+
+        function showFeedbackToast(msg, isSuccess) {
+          feedbackMsg.textContent = msg;
+          feedbackToast.classList.remove('opacity-0', 'translate-y-2', 'pointer-events-none', 'bg-emerald-950/95', 'border-emerald-500/60', 'bg-rose-950/95', 'border-rose-500/60');
+
+          if (isSuccess) {
+            feedbackIcon.textContent = '🔥';
+            if (feedbackTitle) {
+              feedbackTitle.textContent = 'Подсказка эксперта ФИПИ:';
+              feedbackTitle.className = 'font-bold text-[11px] uppercase tracking-wider mb-0.5 text-emerald-300';
+            }
+            feedbackToast.classList.add('bg-emerald-950/95', 'border-emerald-500/60');
+            if (btnNextStep) btnNextStep.classList.remove('hidden');
+          } else {
+            feedbackIcon.textContent = '❌';
+            if (feedbackTitle) {
+              feedbackTitle.textContent = 'Ошибка критерия ОГЭ:';
+              feedbackTitle.className = 'font-bold text-[11px] uppercase tracking-wider mb-0.5 text-rose-300';
+            }
+            feedbackToast.classList.add('bg-rose-950/95', 'border-rose-500/60');
+            if (btnNextStep) btnNextStep.classList.add('hidden');
+          }
+
+          feedbackToast.classList.remove('opacity-0', 'translate-y-2', 'pointer-events-none');
+        }
+
+        function hideFeedbackToast() {
+          if (advanceTimer) {
+            clearTimeout(advanceTimer);
+            advanceTimer = null;
+          }
+          feedbackToast.classList.add('opacity-0', 'translate-y-2', 'pointer-events-none');
+          if (btnNextStep) btnNextStep.classList.add('hidden');
+        }
+
+        // ----------------------------------------------------
+        // 10. FINISH & SCREEN 3
+        // ----------------------------------------------------
+        function finishGame() {
+          state.score = 7;
+          scoreText.textContent = `Баллы: 7/7`;
+
+          screenGame.classList.add('hidden');
+          screenFinal.classList.remove('hidden');
+
+          const topic = TOPICS_DATA[state.selectedTopicId];
+          finalTopicPill.textContent = `${topic.icon} ${topic.name} • 6 универсальных связок`;
+
+          // Build final formatted text with simple sentences & translation
+          finalMonologueText.innerHTML = '';
+          state.assembledSentences.forEach((s, idx) => {
+            const p = document.createElement('div');
+            p.className = 'p-2.5 rounded-xl bg-slate-900/70 border border-slate-800/90 leading-relaxed';
+            p.innerHTML = `
+              <div class="text-xs sm:text-[13px] text-slate-100 flex items-baseline flex-wrap gap-1">
+                <span class="w-4 h-4 rounded-full bg-indigo-500/30 text-indigo-300 text-[10px] font-bold inline-flex items-center justify-center shrink-0 mr-1">${idx + 1}</span>
+                <strong class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-pink-300 to-amber-300 underline decoration-indigo-400 decoration-2">
+                  ${s.phrase}
+                </strong>
+                <span>${s.body ? ' ' + s.body : ''}</span>
+              </div>
+              ${s.translationRu ? `<div class="text-[11px] text-slate-400 pl-5 mt-1 italic">${s.translationRu}</div>` : ''}
+            `;
+            finalMonologueText.appendChild(p);
+          });
+
+          // Also populate sample in Cheat Sheet tab
+          if (cheatSampleText) {
+            cheatSampleText.innerHTML = '';
+            state.assembledSentences.forEach((s, idx) => {
+              const item = document.createElement('div');
+              item.innerHTML = `
+                <div class="text-slate-200">
+                  <span class="text-indigo-400 font-bold">${idx + 1}. ${s.phrase}</span>
+                  <span>${s.body ? ' ' + s.body : ''}</span>
+                </div>
+                ${s.translationRu ? `<div class="text-[10px] text-slate-400 italic pl-3">— ${s.translationRu}</div>` : ''}
+              `;
+              cheatSampleText.appendChild(item);
+            });
+          }
+
+          // Trigger fireworks
+          triggerCelebration();
+        }
+
+        // ----------------------------------------------------
+        // 11. MONOLOGUE TEXT HELPER
+        // ----------------------------------------------------
+        function getFullText() {
+          return state.assembledSentences.map(s => {
+            return s.body ? `${s.phrase} ${s.body}` : s.phrase;
+          }).join(' ');
+        }
+
+        // ----------------------------------------------------
+        // 12. COPY TO CLIPBOARD
+        // ----------------------------------------------------
+        btnCopyText.addEventListener('click', () => {
+          const text = getFullText();
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+              copyBtnText.textContent = 'Скопировано! ✅';
+              playClickSound();
+              setTimeout(() => {
+                copyBtnText.textContent = 'Скопировать текст';
+              }, 2000);
+            }).catch(() => {
+              fallbackCopy(text);
+            });
+          } else {
+            fallbackCopy(text);
+          }
+        });
+
+        function fallbackCopy(text) {
+          const textArea = document.createElement('textarea');
+          textArea.value = text;
+          document.body.appendChild(textArea);
+          textArea.select();
+          try {
+            document.execCommand('copy');
+            copyBtnText.textContent = 'Скопировано! ✅';
+            setTimeout(() => {
+              copyBtnText.textContent = 'Скопировать текст';
+            }, 2000);
+          } catch (err) {
+            alert('Не удалось скопировать автоматически. Выделите текст вручную.');
+          }
+          document.body.removeChild(textArea);
+        }
+
+        // ----------------------------------------------------
+        // 13. TABS (MONOLOGUE VS CHEAT SHEET)
+        // ----------------------------------------------------
+        tabBtnMonologue.addEventListener('click', () => {
+          playClickSound();
+          tabBtnMonologue.classList.add('bg-indigo-600', 'text-white', 'shadow');
+          tabBtnMonologue.classList.remove('text-slate-400');
+          tabBtnCheatsheet.classList.remove('bg-indigo-600', 'text-white', 'shadow');
+          tabBtnCheatsheet.classList.add('text-slate-400');
+
+          tabContentMonologue.classList.remove('hidden');
+          tabContentCheatsheet.classList.add('hidden');
+        });
+
+        tabBtnCheatsheet.addEventListener('click', () => {
+          playClickSound();
+          tabBtnCheatsheet.classList.add('bg-indigo-600', 'text-white', 'shadow');
+          tabBtnCheatsheet.classList.remove('text-slate-400');
+          tabBtnMonologue.classList.remove('bg-indigo-600', 'text-white', 'shadow');
+          tabBtnMonologue.classList.add('text-slate-400');
+
+          tabContentCheatsheet.classList.remove('hidden');
+          tabContentMonologue.classList.add('hidden');
+        });
+
+        // ----------------------------------------------------
+        // 14. RESTART & RETRY
+        // ----------------------------------------------------
+        btnRestartGame.addEventListener('click', () => {
+          screenFinal.classList.add('hidden');
+          screenGame.classList.add('hidden');
+          screenStart.classList.remove('hidden');
+        });
+
+        btnRetrySpeed.addEventListener('click', () => {
+          startGame();
+        });
+
+      })();
+    </script>
+  </body>
+</html>

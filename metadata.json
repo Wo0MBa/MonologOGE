@@ -1,0 +1,6 @@
+{
+  "name": "OGE English Monologue Trainer",
+  "description": "Интерактивный тренажер и мини-игра для подготовки к Заданию 3 устной части ОГЭ по английскому языку: универсальный каркас монолога из 6 связок на максимум баллов.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
